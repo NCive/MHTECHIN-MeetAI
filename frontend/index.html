@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MHTECHIN MeetAI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <h1>MHTECHIN MeetAI</h1>
+
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#login">Login</a>
+            <a href="#upload">Upload</a>
+            <a href="#summary">AI Summary</a>
+            <a href="#mom">MOM</a>
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div>
+
+            <h2>Transform Client Meetings into Professional MOMs</h2>
+
+            <p>
+                Upload meeting recordings and let AI generate meeting summaries,
+                business requirements, action items and professional
+                Minutes of Meeting automatically.
+            </p>
+
+            <button id="uploadBtn">
+                Upload Recording
+            </button>
+
+            <button id="generateBtn">
+                Generate MOM
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ================= LOGIN ================= -->
+
+    <section id="login" class="panel">
+
+        <h2>User Authentication</h2>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Full Name (Signup Only)"
+        >
+
+        <br><br>
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+        >
+
+        <br><br>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+        >
+
+        <br><br>
+
+        <button id="signupBtn">
+            Sign Up
+        </button>
+
+        <button id="loginBtn">
+            Login
+        </button>
+
+        <br><br>
+
+        <p id="loginStatus"></p>
+
+    </section>
+
+    <!-- ================= STATS ================= -->
+
+    <section class="stats">
+
+        <div class="card">
+            <h3>120</h3>
+            <p>Meetings</p>
+        </div>
+
+        <div class="card">
+            <h3>98%</h3>
+            <p>Accuracy</p>
+        </div>
+
+        <div class="card">
+            <h3>432</h3>
+            <p>Action Items</p>
+        </div>
+
+        <div class="card">
+            <h3>115</h3>
+            <p>MOMs</p>
+        </div>
+
+    </section>
+
+    <!-- ================= FILE UPLOAD ================= -->
+
+    <section id="upload" class="panel">
+
+        <h2>Upload Meeting Recording</h2>
+
+        <input
+            type="file"
+            id="file"
+            accept=".mp3,.wav,.m4a,.aac,.ogg,.flac,.mp4,.mov,.avi,.mkv,.webm"
+        >
+
+        <p id="fname">
+            No file selected
+        </p>
+
+        <div class="bar">
+            <div id="progress">0%</div>
+        </div>
+
+        <br>
+
+        <button id="uploadFileBtn">
+            Upload File
+        </button>
+
+    </section>
+
+    <!-- ================= AI OUTPUT ================= -->
+
+    <section id="summary" class="grid">
+
+        <div class="card">
+
+            <h3>Meeting Summary</h3>
+
+            <p id="summaryText">
+                Waiting for AI...
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Requirements</h3>
+
+            <ul id="requirementsList">
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Action Items</h3>
+
+            <ul id="actionList">
+            </ul>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Follow-up Email</h3>
+
+            <pre id="emailText">
+Waiting for AI...
+            </pre>
+
+        </div>
+
+    </section>
+
+    <!-- ================= MOM ================= -->
+
+    <section id="mom" class="panel">
+
+        <h2>Minutes of Meeting</h2>
+
+        <article>
+
+            <h3 id="meetingTitle">
+                Meeting Title
+            </h3>
+
+            <br>
+
+            <strong>Date / Context</strong>
+
+            <p id="meetingDate">
+                -
+            </p>
+
+            <br>
+
+            <strong>Participants</strong>
+
+            <ul id="participantsList">
+            </ul>
+
+            <br>
+
+            <strong>Executive Summary</strong>
+
+            <p id="executiveSummary">
+                Waiting for AI...
+            </p>
+
+            <br>
+
+            <strong>Topics Discussed</strong>
+
+            <ul id="topicsList">
+            </ul>
+
+            <br>
+
+            <strong>Key Decisions</strong>
+
+            <ul id="decisionsList">
+            </ul>
+
+            <br>
+
+            <strong>Next Steps</strong>
+
+            <ul id="nextStepsList">
+            </ul>
+
+        </article>
+
+        <br>
+
+        <button id="downloadPDF">
+            Download PDF
+        </button>
+
+        <button id="downloadDOCX">
+            Download DOCX
+        </button>
+
+    </section>
+
+    <!-- ================= STATUS ================= -->
+
+    <section class="panel">
+
+        <h2>Server Status</h2>
+
+        <p id="serverStatus">
+            Not Connected
+        </p>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        © 2026 MHTECHIN MeetAI
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+/* ===========================
+   AI Client Meeting MOM Generator
+   =========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fb;
+    color:#222;
+    line-height:1.6;
+}
+
+/* ===========================
+   Header
+   =========================== */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+header h1{
+    color:#2563eb;
+    font-size:28px;
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#1d4ed8;
+}
+
+/* ===========================
+   Hero
+   =========================== */
+
+.hero{
+    background:linear-gradient(135deg,#2563eb,#60a5fa);
+    color:white;
+    padding:70px 8%;
+}
+
+.hero h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+/* ===========================
+   Buttons
+   =========================== */
+
+button{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin:6px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.hero button{
+
+    background:white;
+
+    color:#2563eb;
+
+}
+
+.hero button:hover{
+
+    background:#eff6ff;
+
+}
+
+/* ===========================
+   Cards
+   =========================== */
+
+.stats,
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    padding:35px 8%;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:22px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.card h3{
+
+    color:#2563eb;
+
+    margin-bottom:15px;
+
+}
+
+.card ul{
+
+    margin-left:20px;
+
+}
+
+.card li{
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+   Panels
+   =========================== */
+
+.panel{
+
+    background:white;
+
+    border-radius:12px;
+
+    margin:0 8% 35px;
+
+    padding:25px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.panel h2{
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   Inputs
+   =========================== */
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+
+    width:100%;
+
+    max-width:450px;
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+input[type="file"]{
+
+    margin-top:10px;
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+   Upload Progress
+   =========================== */
+
+.bar{
+
+    width:100%;
+
+    height:22px;
+
+    background:#ddd;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    margin-top:15px;
+
+}
+
+#progress{
+
+    width:0%;
+
+    height:100%;
+
+    background:#22c55e;
+
+    color:white;
+
+    text-align:center;
+
+    line-height:22px;
+
+    font-size:12px;
+
+    transition:.4s;
+
+}
+
+/* ===========================
+   Status
+   =========================== */
+
+#serverStatus{
+
+    font-weight:bold;
+
+    color:#2563eb;
+
+}
+
+#loginStatus{
+
+    font-weight:bold;
+
+    color:#16a34a;
+
+}
+
+/* ===========================
+   MOM
+   =========================== */
+
+article{
+
+    background:#f8fafc;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    margin-top:20px;
+
+}
+
+article h3{
+
+    color:#2563eb;
+
+}
+
+article ul{
+
+    margin-left:22px;
+
+}
+
+article li{
+
+    margin-bottom:10px;
+
+}
+
+pre{
+
+    white-space:pre-wrap;
+
+    word-wrap:break-word;
+
+    font-family:inherit;
+
+}
+
+/* ===========================
+   Footer
+   =========================== */
+
+footer{
+
+    margin-top:40px;
+
+    background:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#666;
+
+    box-shadow:0 -2px 8px rgba(0,0,0,.05);
+
+}
+
+/* ===========================
+   Mobile
+   =========================== */
+
+@media(max-width:768px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        text-align:center;
+
+    }
+
+    nav{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    nav a{
+
+        margin:8px;
+
+    }
+
+    .hero{
+
+        text-align:center;
+
+    }
+
+    .hero h2{
+
+        font-size:30px;
+
+    }
+
+    button{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+    input{
+
+        width:100%;
+
+    }
+
+}
