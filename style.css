@@ -1,0 +1,14 @@
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f4f7fb;color:#222}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+nav a{margin-left:18px;text-decoration:none;color:#2563eb;font-weight:600}
+.hero{background:linear-gradient(135deg,#2563eb,#60a5fa);color:#fff;padding:60px 8%}
+.hero h2{font-size:2rem;margin-bottom:10px}.hero p{max-width:700px;margin-bottom:20px}
+button{background:#2563eb;color:#fff;border:none;padding:10px 18px;border-radius:6px;margin:5px;cursor:pointer}
+.hero button{background:#fff;color:#2563eb}
+.stats,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:30px 8%}
+.card,.panel{background:#fff;border-radius:12px;padding:20px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.panel{margin:0 8% 30px}
+.bar{height:8px;background:#ddd;border-radius:10px;margin-top:15px}.bar div{height:100%;width:35%;background:#22c55e;border-radius:10px}
+footer{text-align:center;padding:20px;color:#666}
