@@ -1,0 +1,1 @@
+const f=document.getElementById('file');if(f){f.onchange=()=>{document.getElementById('fname').textContent=f.files.length?f.files[0].name:'No file selected';document.getElementById('progress').style.width='100%';};}
